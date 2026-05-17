@@ -279,7 +279,7 @@ async def ask_claude(lang: str, history: list, extra_user_msg: str = None) -> st
     if extra_user_msg:
         msgs.append({"role": "user", "content": extra_user_msg})
     response = await client.messages.create(
-        model="claude-sonnet-4-5-20251001",
+        model="claude-sonnet-4-5",
         max_tokens=1500,
         system=system_prompt(lang),
         messages=msgs,
